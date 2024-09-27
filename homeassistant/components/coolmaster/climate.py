@@ -5,8 +5,6 @@ from __future__ import annotations
 import logging
 from typing import Any
 
-from pycoolmasternet_async import SWING_MODES
-
 from homeassistant.components.climate import (
     ClimateEntity,
     ClimateEntityFeature,
@@ -20,6 +18,7 @@ from homeassistant.helpers.entity_platform import AddEntitiesCallback
 
 from .const import CONF_SUPPORTED_MODES, DATA_COORDINATOR, DATA_INFO, DOMAIN
 from .entity import CoolmasterEntity
+from .pycoolmasternet_async_prompt import SWING_MODES
 
 CM_TO_HA_STATE = {
     "heat": HVACMode.HEAT,

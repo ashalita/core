@@ -4,7 +4,6 @@ from __future__ import annotations
 
 from typing import Any
 
-from pycoolmasternet_async import CoolMasterNet
 import voluptuous as vol
 
 from homeassistant.components.climate import HVACMode
@@ -13,6 +12,7 @@ from homeassistant.const import CONF_HOST, CONF_PORT
 from homeassistant.core import callback
 
 from .const import CONF_SUPPORTED_MODES, CONF_SWING_SUPPORT, DEFAULT_PORT, DOMAIN
+from .pycoolmasternet_async_prompt import CoolMasterNet
 
 AVAILABLE_MODES = [
     HVACMode.OFF.value,

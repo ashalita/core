@@ -1,7 +1,5 @@
 """The Coolmaster integration."""
 
-from pycoolmasternet_async import CoolMasterNet
-
 from homeassistant.config_entries import ConfigEntry
 from homeassistant.const import CONF_HOST, CONF_PORT, Platform
 from homeassistant.core import HomeAssistant
@@ -9,6 +7,7 @@ from homeassistant.exceptions import ConfigEntryNotReady
 
 from .const import CONF_SWING_SUPPORT, DATA_COORDINATOR, DATA_INFO, DOMAIN
 from .coordinator import CoolmasterDataUpdateCoordinator
+from .pycoolmasternet_async_prompt import CoolMasterNet
 
 PLATFORMS = [Platform.BINARY_SENSOR, Platform.BUTTON, Platform.CLIMATE, Platform.SENSOR]
 

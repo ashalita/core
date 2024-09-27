@@ -1,13 +1,12 @@
 """Base entity for Coolmaster integration."""
 
-from pycoolmasternet_async.coolmasternet import CoolMasterNetUnit
-
 from homeassistant.core import callback
 from homeassistant.helpers.device_registry import DeviceInfo
 from homeassistant.helpers.update_coordinator import CoordinatorEntity
 
 from . import CoolmasterDataUpdateCoordinator
 from .const import DOMAIN
+from .pycoolmasternet_async_prompt.coolmasternet import CoolMasterNetUnit
 
 
 class CoolmasterEntity(CoordinatorEntity[CoolmasterDataUpdateCoordinator]):
